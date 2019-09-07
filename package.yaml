@@ -1,0 +1,52 @@
+name:                dotex
+version:             0.1.0.0
+license:             Apache-2.0
+
+extra-source-files: []
+
+default-extensions:
+  - FlexibleContexts
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - RecordWildCards
+
+dependencies:
+  - base
+  - basic-prelude
+  - bytestring
+  - FontyFruity
+  - JuicyPixels
+  - lucid
+  - lucid-svg
+  - parseargs
+  - rasterific-svg
+  - svg-tree
+  - text
+  - tuple
+  - utf8-string
+  - xml
+
+library:
+  source-dirs: src
+
+executables:
+  dotex-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - dotex
+
+tests:
+  dotex-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - dotex

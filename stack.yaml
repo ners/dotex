@@ -1,0 +1,7 @@
+resolver: lts-13.19
+packages:
+  - .
+extra-deps:
+  - lucid-svg-0.7.0.0
+system-ghc: true
+allow-newer: true
